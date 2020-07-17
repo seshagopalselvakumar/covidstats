@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/21c50b594b.js"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="./countUp.js"></script>
+    <link rel="stylesheet"
+        href="style.css" />
+    <title>Coronavirus Dashboard - country</title>
+</head>
+
+<body>
+    <div class="div-container">
+        <header class="header-main">
+            <h1>Covid-19 live stats</h1>
+        </header>
+        <div class="div-main">
+            <div class="div-statvalue">
+                <h3>Last updated at:</h3>
+                <span class="h3-countryupdated"></h3>
+            </div>
+            <div class="div-statvalue">
+                <h2>Confirmed cases:</h2>
+                <p class="p-countryconfirmed"
+                    id="p-countryconfirmed"></p>
+            </div>
+            <div class="div-statvalue">
+                <h2>Deaths:</h2>
+                <p class="p-countrydeaths"
+                    id="p-countrydeaths"></p>
+            </div>
+            <div class="div-statvalue">
+                <h2>Recovered:</h2>
+                <p class="p-countryrecovered"
+                    id="p-countryrecovered"></p>
+            </div>
+            <div class="div-statvalue">
+                <h2>Active cases:</h2>
+                <p class="p-countryactive"
+                    id="p-countryactive"></p>
+            </div>
+            <div>
+                <button class="button-country"
+                    onclick=goBack()>Wordwide Stats</button>
+            </div>
+        </div>
+        <div class="div-chart">
+            <canvas id="myChart"
+                aria-label="coronavirus cases"
+                role="figure"></canvas>
+        </div>
+        <p class="p-source">Source: https://www.worldometers.info/coronavirus/</p>
+        <footer class="footer-main">
+            <p class="p-footer"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by <a href="https://seshagopalselvakumar.github.io">Seshagopal Selvakumar</a></p>
+        </footer>
+    </div>
+</body>
+<script src="./Chart.min.js"></script>
+<script src="./country_script.js"></script>
+
+</html>
