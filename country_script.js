@@ -23,11 +23,12 @@ goBack = () => {
   window.history.back();
 };
 displayResults = (result) => {
+  console.log("result", result)
   let updatedTime = new Date(result.updated);
   let countryConfirmedCounter = new CountUp(
     "p-countryconfirmed",
     0,
-    result.total.total
+    result.total.cases
   );
   let countryDeathsCounter = new CountUp("p-countrydeaths", 0, result.total.deaths);
   let countryRecoveredCounter = new CountUp(
